@@ -7,6 +7,6 @@ public class App {
         String str = sc.nextLine();
         sc.close();
         SortingMachine sort = new SortingMachine();
-        System.out.println(sort.bubble(str));
+        System.out.println(sort.insertion(str));
     }
 }
