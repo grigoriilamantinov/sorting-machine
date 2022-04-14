@@ -6,7 +6,10 @@ public class App {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         sc.close();
-        SortingMachine sort = new SortingMachine();
-        System.out.println(sort.insertion(str));
+        SortingMachine sortingMachine = new SortingMachine();
+        UserInterface uI = new UserInterface();
+        PropertiesLoader loader = new PropertiesLoader();
+        System.out.println(sortingMachine.getSortedByInsertion(str));
+        System.out.println(uI.getMessageAboutBubble(loader));
     }
 }

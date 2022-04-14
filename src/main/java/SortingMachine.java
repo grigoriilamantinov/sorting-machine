@@ -1,5 +1,5 @@
 public class SortingMachine {
-    public String bubble(String input) {
+    public String getSortedByBubble(final String input) {
         char[] inputArray = input.toCharArray();
         boolean isSorted = false;
         char buffer;
@@ -22,11 +22,8 @@ public class SortingMachine {
         return sb.toString();
     }
 
-    public String insertion (String input) {
+    public String getSortedByInsertion (final String input) {
         char[] inputArray = input.toCharArray();
-//        boolean isSorted = false;
-//        char buffer;
-//        char leftChar;
         char rightChar;
         int indexLeft;
         for (int indexRight = 1; indexRight < inputArray.length; indexRight++) {
@@ -38,7 +35,6 @@ public class SortingMachine {
             }
             inputArray[indexLeft+1] = rightChar;
         }
-
         StringBuilder sb = new StringBuilder();
         for (char element : inputArray) {
             sb.append(element);
