@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class App {
@@ -6,10 +7,11 @@ public class App {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         sc.close();
+        char[] inputChar = str.toCharArray();
         SortingMachine sortingMachine = new SortingMachine();
         UserInterface uI = new UserInterface();
         PropertiesLoader loader = new PropertiesLoader();
-        System.out.println(sortingMachine.getSortedByInsertion(str));
-        System.out.println(uI.getMessageAboutBubble(loader));
+        sortingMachine.getSortedByQuickSort(inputChar, 0, inputChar.length-1);
+        System.out.println(Arrays.toString(inputChar));
     }
 }
