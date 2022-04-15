@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 
 public class UserInterface {
     public String getMessageAboutBubble(PropertiesLoader loader) {
-        File file = new File(loader.getGetMessageBubble());
+        File file = new File(loader.getMessageAboutBubble());
         return this.formatMessage(file);
     }
 
